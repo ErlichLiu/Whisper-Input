@@ -28,7 +28,8 @@ def setup_logger():
     file_handler = RotatingFileHandler(
         'logs/app.log',
         maxBytes=1024*1024,  # 1MB
-        backupCount=5
+        backupCount=5,
+        encoding='utf-8'
     )
     file_handler.setFormatter(logging.Formatter(
         '%(asctime)s - %(levelname)s - %(message)s'

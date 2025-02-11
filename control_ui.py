@@ -373,7 +373,7 @@ class ControlUI(QWidget):
     def update_log_view(self):
         """实时更新日志显示"""
         try:
-            with open('logs/app.log', 'r') as f:
+            with open('logs/app.log', 'r', encoding='utf-8') as f:
                 # 跳转到上次读取位置
                 f.seek(self._log_file_pos)
                 
